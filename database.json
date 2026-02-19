@@ -1,0 +1,542 @@
+{
+  "genes": {
+    "CYP2D6": {
+      "chromosome": "22",
+      "variants": {
+        "rs3892097": {
+          "star_allele": "*4",
+          "effect": "no_function",
+          "clinical_significance": "Loss of function variant",
+          "ref": "G",
+          "alt": "A"
+        },
+        "rs5030655": {
+          "star_allele": "*6",
+          "effect": "no_function",
+          "clinical_significance": "Frameshift mutation causing non-functional enzyme",
+          "ref": "T",
+          "alt": "TA"
+        },
+        "rs16947": {
+          "star_allele": "*2",
+          "effect": "normal_function",
+          "clinical_significance": "Normal function variant",
+          "ref": "G",
+          "alt": "A"
+        },
+        "rs1065852": {
+          "star_allele": "*10",
+          "effect": "decreased_function",
+          "clinical_significance": "Decreased enzyme activity",
+          "ref": "C",
+          "alt": "T"
+        },
+        "rs28371725": {
+          "star_allele": "*41",
+          "effect": "decreased_function",
+          "clinical_significance": "Reduced enzyme activity",
+          "ref": "C",
+          "alt": "T"
+        }
+      }
+    },
+    "CYP2C19": {
+      "chromosome": "10",
+      "variants": {
+        "rs4244285": {
+          "star_allele": "*2",
+          "effect": "no_function",
+          "clinical_significance": "Splicing defect causing loss of function",
+          "ref": "G",
+          "alt": "A"
+        },
+        "rs4986893": {
+          "star_allele": "*3",
+          "effect": "no_function",
+          "clinical_significance": "Premature stop codon",
+          "ref": "G",
+          "alt": "A"
+        },
+        "rs12248560": {
+          "star_allele": "*17",
+          "effect": "increased_function",
+          "clinical_significance": "Increased transcription and enzyme activity",
+          "ref": "C",
+          "alt": "T"
+        }
+      }
+    },
+    "CYP2C9": {
+      "chromosome": "10",
+      "variants": {
+        "rs1799853": {
+          "star_allele": "*2",
+          "effect": "decreased_function",
+          "clinical_significance": "Reduced warfarin metabolism",
+          "ref": "C",
+          "alt": "T"
+        },
+        "rs1057910": {
+          "star_allele": "*3",
+          "effect": "no_function",
+          "clinical_significance": "Significantly reduced enzyme activity",
+          "ref": "A",
+          "alt": "C"
+        }
+      }
+    },
+    "SLCO1B1": {
+      "chromosome": "12",
+      "variants": {
+        "rs4149056": {
+          "star_allele": "*5",
+          "effect": "decreased_function",
+          "clinical_significance": "Reduced hepatic uptake of statins; increased myopathy risk",
+          "ref": "T",
+          "alt": "C"
+        },
+        "rs2306283": {
+          "star_allele": "*1b",
+          "effect": "increased_function",
+          "clinical_significance": "Increased transporter activity",
+          "ref": "A",
+          "alt": "G"
+        }
+      }
+    },
+    "TPMT": {
+      "chromosome": "6",
+      "variants": {
+        "rs1800462": {
+          "star_allele": "*2",
+          "effect": "no_function",
+          "clinical_significance": "Loss of TPMT enzyme activity",
+          "ref": "C",
+          "alt": "G"
+        },
+        "rs1800460": {
+          "star_allele": "*3B",
+          "effect": "no_function",
+          "clinical_significance": "Loss of TPMT enzyme activity",
+          "ref": "C",
+          "alt": "T"
+        },
+        "rs1142345": {
+          "star_allele": "*3C",
+          "effect": "no_function",
+          "clinical_significance": "Loss of TPMT enzyme activity",
+          "ref": "A",
+          "alt": "G"
+        }
+      }
+    },
+    "DPYD": {
+      "chromosome": "1",
+      "variants": {
+        "rs3918290": {
+          "star_allele": "*2A",
+          "effect": "no_function",
+          "clinical_significance": "Complete DPD deficiency; severe fluoropyrimidine toxicity",
+          "ref": "C",
+          "alt": "T"
+        },
+        "rs55886062": {
+          "star_allele": "*13",
+          "effect": "no_function",
+          "clinical_significance": "Non-functional DPD enzyme",
+          "ref": "A",
+          "alt": "C"
+        },
+        "rs67376798": {
+          "star_allele": "D949V",
+          "effect": "decreased_function",
+          "clinical_significance": "Reduced DPD activity",
+          "ref": "T",
+          "alt": "A"
+        }
+      }
+    }
+  },
+  "drug_gene_mapping": {
+    "CODEINE": {
+      "primary_gene": "CYP2D6",
+      "mechanism": "CYP2D6 converts codeine to morphine (active metabolite). Variations in CYP2D6 activity directly affect analgesic efficacy and toxicity risk.",
+      "risk_rules": {
+        "PM": {
+          "risk_label": "Ineffective",
+          "severity": "high",
+          "confidence": 0.95,
+          "recommendation": "Avoid codeine. Use alternative analgesics not metabolized by CYP2D6 such as morphine, non-opioid analgesics, or acetaminophen.",
+          "cpic_guideline": "CPIC recommends avoiding codeine in CYP2D6 poor metabolizers due to lack of analgesic effect."
+        },
+        "IM": {
+          "risk_label": "Adjust Dosage",
+          "severity": "moderate",
+          "confidence": 0.85,
+          "recommendation": "Reduced codeine efficacy expected. Consider alternative analgesics or monitor closely for inadequate pain relief. If codeine is used, be aware that higher doses may not compensate due to metabolic ceiling.",
+          "cpic_guideline": "CPIC suggests using alternative analgesics for CYP2D6 intermediate metabolizers if inadequate response."
+        },
+        "NM": {
+          "risk_label": "Safe",
+          "severity": "none",
+          "confidence": 0.92,
+          "recommendation": "Standard codeine dosing is appropriate. Monitor for expected analgesic response and standard opioid side effects.",
+          "cpic_guideline": "CPIC: Use label-recommended age- or weight-specific dosing."
+        },
+        "RM": {
+          "risk_label": "Adjust Dosage",
+          "severity": "moderate",
+          "confidence": 0.88,
+          "recommendation": "Increased conversion to morphine possible. Use lower doses and monitor for opioid toxicity symptoms including respiratory depression, sedation, and confusion.",
+          "cpic_guideline": "CPIC recommends caution with rapid metabolizers; consider lower doses or alternative analgesics."
+        },
+        "URM": {
+          "risk_label": "Toxic",
+          "severity": "critical",
+          "confidence": 0.96,
+          "recommendation": "AVOID codeine. Ultra-rapid metabolism causes dangerously high morphine levels. Life-threatening respiratory depression reported. Use alternative non-CYP2D6 analgesics.",
+          "cpic_guideline": "CPIC strongly recommends avoiding codeine in ultra-rapid metabolizers due to risk of fatal respiratory depression."
+        },
+        "Unknown": {
+          "risk_label": "Unknown",
+          "severity": "moderate",
+          "confidence": 0.30,
+          "recommendation": "Insufficient genetic data to determine CYP2D6 metabolizer status. Consider pharmacogenomic testing before prescribing codeine. Use standard dosing with enhanced monitoring.",
+          "cpic_guideline": "Consider comprehensive CYP2D6 genotyping."
+        }
+      }
+    },
+    "CLOPIDOGREL": {
+      "primary_gene": "CYP2C19",
+      "mechanism": "CYP2C19 bioactivates clopidogrel from prodrug to active antiplatelet metabolite. Reduced CYP2C19 function leads to diminished platelet inhibition and increased cardiovascular event risk.",
+      "risk_rules": {
+        "PM": {
+          "risk_label": "Ineffective",
+          "severity": "critical",
+          "confidence": 0.95,
+          "recommendation": "Avoid clopidogrel. Use alternative antiplatelet agents such as prasugrel or ticagrelor which do not depend on CYP2C19 activation.",
+          "cpic_guideline": "CPIC recommends alternative antiplatelet therapy for CYP2C19 poor metabolizers."
+        },
+        "IM": {
+          "risk_label": "Adjust Dosage",
+          "severity": "high",
+          "confidence": 0.88,
+          "recommendation": "Reduced clopidogrel activation expected. Consider alternative antiplatelet therapy (prasugrel/ticagrelor) or use with enhanced platelet function monitoring.",
+          "cpic_guideline": "CPIC recommends alternative antiplatelet for intermediate metabolizers undergoing PCI."
+        },
+        "NM": {
+          "risk_label": "Safe",
+          "severity": "none",
+          "confidence": 0.92,
+          "recommendation": "Standard clopidogrel dosing is appropriate. Expected normal antiplatelet response.",
+          "cpic_guideline": "CPIC: Use label-recommended dosing."
+        },
+        "RM": {
+          "risk_label": "Safe",
+          "severity": "none",
+          "confidence": 0.90,
+          "recommendation": "Enhanced clopidogrel activation. Standard dosing appropriate with normal monitoring. May have enhanced antiplatelet effect.",
+          "cpic_guideline": "CPIC: Use label-recommended dosing."
+        },
+        "URM": {
+          "risk_label": "Safe",
+          "severity": "low",
+          "confidence": 0.88,
+          "recommendation": "Enhanced clopidogrel activation. Standard dosing appropriate. Monitor for increased bleeding risk.",
+          "cpic_guideline": "CPIC: Use label-recommended dosing; monitor for bleeding."
+        },
+        "Unknown": {
+          "risk_label": "Unknown",
+          "severity": "moderate",
+          "confidence": 0.30,
+          "recommendation": "Insufficient data. Consider CYP2C19 genotyping especially if undergoing PCI. Use standard dosing with monitoring.",
+          "cpic_guideline": "Consider CYP2C19 genotyping before initiating clopidogrel."
+        }
+      }
+    },
+    "WARFARIN": {
+      "primary_gene": "CYP2C9",
+      "mechanism": "CYP2C9 metabolizes S-warfarin (the more potent enantiomer). Reduced CYP2C9 function leads to decreased warfarin clearance and increased bleeding risk at standard doses.",
+      "risk_rules": {
+        "PM": {
+          "risk_label": "Toxic",
+          "severity": "critical",
+          "confidence": 0.94,
+          "recommendation": "Significantly reduce warfarin dose (30-70% reduction). Initiate at much lower dose with frequent INR monitoring. Consider alternative anticoagulants (DOACs).",
+          "cpic_guideline": "CPIC recommends significantly reduced initial warfarin dose for CYP2C9 poor metabolizers based on pharmacogenomic dosing algorithms."
+        },
+        "IM": {
+          "risk_label": "Adjust Dosage",
+          "severity": "high",
+          "confidence": 0.90,
+          "recommendation": "Reduce warfarin starting dose by 20-40%. More frequent INR monitoring required during initiation. Use pharmacogenomic dosing calculator.",
+          "cpic_guideline": "CPIC recommends reduced initial dose using pharmacogenomic dosing algorithm."
+        },
+        "NM": {
+          "risk_label": "Safe",
+          "severity": "none",
+          "confidence": 0.90,
+          "recommendation": "Standard warfarin dosing protocol. Initiate with standard dose and titrate based on INR monitoring.",
+          "cpic_guideline": "CPIC: Use standard clinical dosing algorithm."
+        },
+        "RM": {
+          "risk_label": "Adjust Dosage",
+          "severity": "low",
+          "confidence": 0.80,
+          "recommendation": "May require higher warfarin doses due to increased metabolism. Monitor INR closely and titrate accordingly.",
+          "cpic_guideline": "Consider higher dose requirements; monitor INR."
+        },
+        "URM": {
+          "risk_label": "Ineffective",
+          "severity": "moderate",
+          "confidence": 0.82,
+          "recommendation": "Rapid warfarin metabolism may lead to subtherapeutic INR at standard doses. Consider higher doses with close INR monitoring or alternative anticoagulants.",
+          "cpic_guideline": "Monitor for subtherapeutic response; dose adjustment likely needed."
+        },
+        "Unknown": {
+          "risk_label": "Unknown",
+          "severity": "moderate",
+          "confidence": 0.30,
+          "recommendation": "Insufficient genetic data. Use standard clinical dosing with careful INR monitoring. Consider CYP2C9 and VKORC1 genotyping.",
+          "cpic_guideline": "Consider pharmacogenomic testing for warfarin dosing optimization."
+        }
+      }
+    },
+    "SIMVASTATIN": {
+      "primary_gene": "SLCO1B1",
+      "mechanism": "SLCO1B1 encodes the OATP1B1 transporter responsible for hepatic uptake of simvastatin acid. Reduced function variants decrease hepatic uptake, increasing systemic simvastatin exposure and myopathy risk.",
+      "risk_rules": {
+        "PM": {
+          "risk_label": "Toxic",
+          "severity": "critical",
+          "confidence": 0.93,
+          "recommendation": "Avoid simvastatin. High risk of myopathy and rhabdomyolysis. Use alternative statins with lower SLCO1B1 dependence (pravastatin, rosuvastatin, fluvastatin).",
+          "cpic_guideline": "CPIC recommends avoiding simvastatin >20mg or using alternative statins for SLCO1B1 poor function."
+        },
+        "IM": {
+          "risk_label": "Adjust Dosage",
+          "severity": "high",
+          "confidence": 0.88,
+          "recommendation": "Limit simvastatin to 20mg daily maximum. Monitor for muscle symptoms (myalgia, weakness). Consider CK levels at baseline. Alternative lower-risk statins may be preferred.",
+          "cpic_guideline": "CPIC recommends simvastatin dose not exceed 20mg daily; consider alternatives."
+        },
+        "NM": {
+          "risk_label": "Safe",
+          "severity": "none",
+          "confidence": 0.90,
+          "recommendation": "Standard simvastatin dosing appropriate. Monitor for standard statin side effects. Routine CK monitoring not required unless symptomatic.",
+          "cpic_guideline": "CPIC: Prescribe desired starting dose and adjust based on disease-specific guidelines."
+        },
+        "RM": {
+          "risk_label": "Safe",
+          "severity": "none",
+          "confidence": 0.85,
+          "recommendation": "Standard simvastatin dosing appropriate. Normal hepatic uptake expected.",
+          "cpic_guideline": "Use standard dosing."
+        },
+        "URM": {
+          "risk_label": "Safe",
+          "severity": "none",
+          "confidence": 0.82,
+          "recommendation": "Enhanced hepatic uptake. Standard dosing appropriate. May have improved hepatic drug targeting.",
+          "cpic_guideline": "Use standard dosing."
+        },
+        "Unknown": {
+          "risk_label": "Unknown",
+          "severity": "moderate",
+          "confidence": 0.30,
+          "recommendation": "Insufficient data. Use conservative simvastatin dosing. Monitor for myopathy symptoms. Consider SLCO1B1 genotyping.",
+          "cpic_guideline": "Consider pharmacogenomic testing if using high-dose simvastatin."
+        }
+      }
+    },
+    "AZATHIOPRINE": {
+      "primary_gene": "TPMT",
+      "mechanism": "TPMT methylates thiopurine drugs, diverting metabolism away from cytotoxic thioguanine nucleotides (TGN). Reduced TPMT activity leads to TGN accumulation causing severe myelosuppression.",
+      "risk_rules": {
+        "PM": {
+          "risk_label": "Toxic",
+          "severity": "critical",
+          "confidence": 0.97,
+          "recommendation": "AVOID azathioprine or reduce dose to 10% of standard. If used, requires drastically reduced dose with weekly CBC monitoring. Life-threatening myelosuppression expected at standard doses. Consider alternative immunosuppressants.",
+          "cpic_guideline": "CPIC recommends drastically reduced dose (10% of normal) or alternative agent for TPMT poor metabolizers."
+        },
+        "IM": {
+          "risk_label": "Adjust Dosage",
+          "severity": "high",
+          "confidence": 0.92,
+          "recommendation": "Reduce azathioprine dose to 30-70% of standard. Initiate at reduced dose with CBC monitoring every 1-2 weeks during first months. Titrate based on tolerance and blood counts.",
+          "cpic_guideline": "CPIC recommends starting at reduced dose (30-70% of full dose) for TPMT intermediate metabolizers."
+        },
+        "NM": {
+          "risk_label": "Safe",
+          "severity": "none",
+          "confidence": 0.92,
+          "recommendation": "Standard azathioprine dosing appropriate. Standard monitoring with periodic CBC.",
+          "cpic_guideline": "CPIC: Start with normal starting dose. Adjust based on disease-specific guidelines."
+        },
+        "RM": {
+          "risk_label": "Adjust Dosage",
+          "severity": "low",
+          "confidence": 0.78,
+          "recommendation": "Increased TPMT activity may reduce efficacy due to rapid drug inactivation. May require higher doses or alternative immunosuppressant if inadequate response.",
+          "cpic_guideline": "Monitor for therapeutic response; dose increase may be needed."
+        },
+        "URM": {
+          "risk_label": "Ineffective",
+          "severity": "moderate",
+          "confidence": 0.80,
+          "recommendation": "Ultra-rapid TPMT metabolism likely causes subtherapeutic TGN levels. Consider higher doses with monitoring or alternative immunosuppressant.",
+          "cpic_guideline": "Consider alternative therapy or dose adjustment based on TGN levels."
+        },
+        "Unknown": {
+          "risk_label": "Unknown",
+          "severity": "high",
+          "confidence": 0.30,
+          "recommendation": "TPMT status unknown. STRONGLY recommend TPMT genotyping or phenotyping before initiating azathioprine. If urgent, start at reduced dose with intensive CBC monitoring.",
+          "cpic_guideline": "CPIC recommends TPMT testing prior to azathioprine initiation."
+        }
+      }
+    },
+    "FLUOROURACIL": {
+      "primary_gene": "DPYD",
+      "mechanism": "DPD (encoded by DPYD) catabolizes >80% of fluorouracil. DPD deficiency causes fluorouracil accumulation leading to severe and potentially fatal toxicity including myelosuppression, mucositis, neurotoxicity, and hand-foot syndrome.",
+      "risk_rules": {
+        "PM": {
+          "risk_label": "Toxic",
+          "severity": "critical",
+          "confidence": 0.97,
+          "recommendation": "AVOID fluorouracil and capecitabine. Complete DPD deficiency causes life-threatening toxicity. Use alternative chemotherapy regimens. If no alternatives, use at most 25-50% dose with intensive monitoring.",
+          "cpic_guideline": "CPIC recommends avoiding fluoropyrimidines in DPD-deficient patients or using drastically reduced dose with therapeutic drug monitoring."
+        },
+        "IM": {
+          "risk_label": "Adjust Dosage",
+          "severity": "high",
+          "confidence": 0.92,
+          "recommendation": "Reduce fluorouracil starting dose by 25-50%. Monitor closely for toxicity including CBC, mucositis assessment, and neurotoxicity screening. Dose titration based on tolerance.",
+          "cpic_guideline": "CPIC recommends 25-50% dose reduction for DPYD intermediate metabolizers with dose titration based on toxicity and pharmacokinetics."
+        },
+        "NM": {
+          "risk_label": "Safe",
+          "severity": "none",
+          "confidence": 0.90,
+          "recommendation": "Standard fluorouracil dosing per oncology protocol. Standard toxicity monitoring applies.",
+          "cpic_guideline": "CPIC: Use label-recommended dosage and administration."
+        },
+        "RM": {
+          "risk_label": "Adjust Dosage",
+          "severity": "low",
+          "confidence": 0.75,
+          "recommendation": "Rapid DPD metabolism may reduce fluorouracil efficacy. Standard dosing with monitoring for therapeutic response. Dose increase may be considered based on pharmacokinetic monitoring.",
+          "cpic_guideline": "Monitor for therapeutic response."
+        },
+        "URM": {
+          "risk_label": "Ineffective",
+          "severity": "moderate",
+          "confidence": 0.78,
+          "recommendation": "Ultra-rapid DPD activity may lead to subtherapeutic fluorouracil levels. Consider pharmacokinetic-guided dosing or alternative chemotherapy.",
+          "cpic_guideline": "Consider dose adjustment based on pharmacokinetic monitoring."
+        },
+        "Unknown": {
+          "risk_label": "Unknown",
+          "severity": "high",
+          "confidence": 0.30,
+          "recommendation": "DPD status unknown. STRONGLY recommend DPYD genotyping before fluorouracil administration. DPD deficiency can be fatal. If urgent, start at reduced dose with intensive monitoring.",
+          "cpic_guideline": "CPIC recommends DPYD testing prior to fluoropyrimidine therapy."
+        }
+      }
+    }
+  },
+  "phenotype_rules": {
+    "CYP2D6": {
+      "activity_scores": {
+        "no_function": 0,
+        "decreased_function": 0.5,
+        "normal_function": 1,
+        "increased_function": 1.5
+      },
+      "phenotype_thresholds": {
+        "PM": [0, 0],
+        "IM": [0.5, 1],
+        "NM": [1.5, 2],
+        "RM": [2.5, 2.5],
+        "URM": [3, 999]
+      }
+    },
+    "CYP2C19": {
+      "activity_scores": {
+        "no_function": 0,
+        "decreased_function": 0.5,
+        "normal_function": 1,
+        "increased_function": 1.5
+      },
+      "phenotype_thresholds": {
+        "PM": [0, 0],
+        "IM": [0.5, 1],
+        "NM": [1.5, 2],
+        "RM": [2.5, 2.5],
+        "URM": [3, 999]
+      }
+    },
+    "CYP2C9": {
+      "activity_scores": {
+        "no_function": 0,
+        "decreased_function": 0.5,
+        "normal_function": 1,
+        "increased_function": 1.5
+      },
+      "phenotype_thresholds": {
+        "PM": [0, 0],
+        "IM": [0.5, 1],
+        "NM": [1.5, 2],
+        "RM": [2.5, 2.5],
+        "URM": [3, 999]
+      }
+    },
+    "SLCO1B1": {
+      "activity_scores": {
+        "no_function": 0,
+        "decreased_function": 0.5,
+        "normal_function": 1,
+        "increased_function": 1.5
+      },
+      "phenotype_thresholds": {
+        "PM": [0, 0],
+        "IM": [0.5, 1],
+        "NM": [1.5, 2],
+        "RM": [2.5, 2.5],
+        "URM": [3, 999]
+      }
+    },
+    "TPMT": {
+      "activity_scores": {
+        "no_function": 0,
+        "decreased_function": 0.5,
+        "normal_function": 1,
+        "increased_function": 1.5
+      },
+      "phenotype_thresholds": {
+        "PM": [0, 0],
+        "IM": [0.5, 1],
+        "NM": [1.5, 2],
+        "RM": [2.5, 2.5],
+        "URM": [3, 999]
+      }
+    },
+    "DPYD": {
+      "activity_scores": {
+        "no_function": 0,
+        "decreased_function": 0.5,
+        "normal_function": 1,
+        "increased_function": 1.5
+      },
+      "phenotype_thresholds": {
+        "PM": [0, 0],
+        "IM": [0.5, 1],
+        "NM": [1.5, 2],
+        "RM": [2.5, 2.5],
+        "URM": [3, 999]
+      }
+    }
+  }
+}
