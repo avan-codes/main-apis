@@ -20,7 +20,7 @@ from pydantic import BaseModel, Field
 #     "OPENROUTER_API_KEY",
     
 # )
-API_KEY = "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"
+API_KEY = "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"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 LLM_MODEL = "openrouter/free"
 
